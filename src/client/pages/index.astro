@@ -1,8 +1,16 @@
 ---
-import Hello from "../components/Hello.astro";
+import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
+import { Signup } from "../components/Signup";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Hello />
+  <Hero />
+  <Signup />
+  <div class="flex justify-center gap-1 md:gap-4 flex-wrap mt-5 md:mt-10">
+    <Card title="Get Interview Ready" description="Prepare for your next job interview with our comprehensive guide." />
+    <Card title="Review AI Slop Faster" description="Review your AI-generated content more efficiently with our tools." />
+    <Card title="Code Faster" description="Write code more efficiently with our intelligent coding assistant." />
+  </div>
 </Layout>
