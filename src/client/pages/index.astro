@@ -3,11 +3,13 @@ import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import { Signup } from "../components/Signup";
 import Layout from "../layouts/Layout.astro";
+import { ServerStatus } from "../components/ServerStatus";
 ---
 
 <Layout>
   <Hero />
   <Signup />
+  <ServerStatus client:load />
   <div class="flex justify-center gap-1 md:gap-4 flex-wrap mt-5 md:mt-10">
     <Card title="Get Interview Ready" description="Prepare for your next job interview with our comprehensive guide." />
     <Card title="Review AI Slop Faster" description="Review your AI-generated content more efficiently with our tools." />

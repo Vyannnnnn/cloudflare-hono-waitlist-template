@@ -12,9 +12,12 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     server: {
+      watch: {
+        ignored: ["**/.wrangler/**"] // Ignore wrangler's cache directory to prevent unnecessary rebuilds
+      },
       proxy: {
         "/api": {
-          target: "http://localhost:1234"
+          target: "http://localhost:8787" // Proxy API requests to the Hono server running on port 8787
         }
       }
     }

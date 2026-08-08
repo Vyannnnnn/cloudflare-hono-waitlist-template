@@ -1,0 +1,27 @@
+{
+  "name": "cloudflare-hono-waitlist-template",
+  "compatibility_date": "2024-06-01",
+  "main": "src/server/index.ts",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "ENVIRONMENT": "development"
+  },
+
+  "env": {
+    "staging": {
+      "vars": {
+        "ENVIRONMENT": "staging",
+        "POLICY_AUD": "4a407e17c816573adbf6831f45bddbfcf83785793ffd244db3c61a1d799ca760",
+        "CF_ACCESS_DOMAIN": "https://square-sun-0fe0.cloudflareaccess.com"
+      }
+    },
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production"
+      }
+    }
+  }
+}
